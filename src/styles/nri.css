@@ -1,0 +1,1462 @@
+/* =========================================================
+   NRI TERMINAL STYLES
+   Matches: 5.1 Dashboard, 5.2 My Properties, 5.3 Shortlisted,
+   5.4 Compare, 5.5 Property Management, 5.6 Services, 5.7 Documents
+   ========================================================= */
+
+.nri-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F8FAF9;
+}
+
+/* NRI Top Navbar */
+.nri-navbar {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.nri-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.nri-brand-logo {
+  height: 40px;
+  width: auto;
+}
+
+.nri-terminal-badge {
+  background: #FFF7ED;
+  color: var(--color-gold);
+  border: 1px solid #FED7AA;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.nri-nav-search {
+  position: relative;
+  width: 380px;
+}
+
+.nri-nav-search input {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  height: 40px;
+  background: #F8FAFC;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+}
+
+.nri-search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+}
+
+.nri-search-filter-icon {
+  position: absolute;
+  right: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.nri-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nri-hotline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-main);
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.nri-hotline-icon {
+  color: var(--color-gold);
+}
+
+.nri-hotline-lbl {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.nri-hotline-num {
+  font-weight: 700;
+  color: var(--color-text-main);
+}
+
+.nri-whatsapp-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.nri-whatsapp-btn:hover {
+  transform: scale(1.08);
+}
+
+.nri-bell-btn {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+}
+
+.nri-bell-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #EF4444;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+
+.nri-user-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-md);
+  transition: background 0.2s;
+}
+
+.nri-user-dropdown:hover {
+  background: #F8FAFC;
+}
+
+.nri-avatar-img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--color-border);
+}
+
+.nri-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.nri-user-name {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-text-main);
+}
+
+.nri-user-role {
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+/* Horizontal Subnavigation Bar */
+.nri-subnav {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  overflow-x: auto;
+  /* Stick directly below the sticky main header (~62px tall) */
+  position: sticky;
+  top: 63px;
+  z-index: 49;
+  /* Hide scrollbar but allow scrolling to prevent page-wide overflow */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  /* Prevent items from wrapping */
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+
+.nri-subnav::-webkit-scrollbar {
+  display: none;
+}
+
+.nri-subnav-link {
+  padding: 0.9rem 0.25rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.nri-subnav-link:hover {
+  color: var(--color-gold);
+}
+
+.nri-subnav-link.active {
+  color: var(--color-gold);
+}
+
+.nri-subnav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2.5px;
+  background: var(--color-gold);
+  border-radius: 2px 2px 0 0;
+}
+
+/* NRI Main Page Wrapper */
+.nri-page-body {
+  flex: 1;
+  padding: 1.5rem 2rem 3rem;
+  max-width: 1536px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Hero Portfolio Banner */
+.nri-hero-banner {
+  background: linear-gradient(135deg, #071A33 0%, #031226 70%, #061830 100%), url('https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=1600&q=80');
+  background-blend-mode: overlay;
+  background-size: cover;
+  border-radius: var(--radius-xl);
+  padding: 2.25rem 2.5rem;
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 25px -5px rgba(7, 26, 51, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.nri-hero-left h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.nri-hero-sub {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.nri-meta-strip {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.85rem;
+}
+
+.nri-meta-strip .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nri-meta-strip .meta-lbl {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.nri-meta-strip .meta-val {
+  font-weight: 700;
+  color: #fff;
+}
+
+.nri-hero-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nri-portfolio-card {
+  background: rgba(11, 34, 64, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.75rem;
+  min-width: 260px;
+}
+
+.nri-portfolio-lbl {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nri-portfolio-val {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.nri-portfolio-growth {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #10B981;
+  font-weight: 700;
+}
+
+/* KPI Horizontal Strip */
+.nri-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nri-kpi-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.nri-kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.nri-kpi-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.nri-kpi-icon {
+  color: var(--color-gold);
+}
+
+.nri-kpi-val {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text-heading);
+  line-height: 1;
+}
+
+.nri-kpi-lbl {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin-top: 0.35rem;
+}
+
+.nri-kpi-card.dark-theme {
+  background: #0B2240;
+  border-color: rgba(197, 138, 42, 0.3);
+  color: #fff;
+}
+
+.nri-kpi-card.dark-theme .nri-kpi-val {
+  color: var(--color-gold);
+}
+
+.nri-kpi-card.dark-theme .nri-kpi-lbl {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Two Column Dashboard Grid */
+.nri-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+/* Section Cards */
+.nri-section-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--shadow-card);
+}
+
+.nri-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.nri-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+.nri-view-all-link {
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Property Cards inside NRI Dashboard */
+.nri-props-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.nri-prop-mini-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-white);
+  transition: all 0.25s ease;
+}
+
+.nri-prop-mini-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-gold);
+}
+
+.nri-prop-mini-img-wrap {
+  width: 100%;
+  height: 120px;
+  position: relative;
+}
+
+.nri-prop-mini-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nri-prop-mini-body {
+  padding: 0.75rem 0.85rem 1rem;
+}
+
+.nri-prop-mini-title {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-text-heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nri-prop-mini-loc {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.nri-prop-mini-price {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-text-gold);
+}
+
+.nri-prop-mini-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* Comparison Table */
+.comparison-table-wrap {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.comparison-table th, 
+.comparison-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.comparison-table th {
+  background: #F8FAFC;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.comparison-table td:first-child {
+  font-weight: 600;
+  color: var(--color-text-main);
+  background: #FAFAFA;
+  width: 25%;
+}
+
+/* Token Payment Tracker Stepper */
+.token-tracker-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  padding: 1.5rem 1rem 0.5rem;
+  position: relative;
+}
+
+.token-tracker-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.token-tracker-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--color-border);
+  z-index: 1;
+}
+
+.token-tracker-step.completed:not(:last-child)::after {
+  background: #10B981;
+}
+
+.token-step-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: 2px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  z-index: 2;
+}
+
+.token-tracker-step.completed .token-step-icon {
+  background: #DCFCE7;
+  border-color: #10B981;
+  color: #10B981;
+}
+
+.token-tracker-step.active .token-step-icon {
+  background: #FEF3C7;
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.token-step-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+  color: var(--color-text-heading);
+}
+
+.token-step-desc {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+/* Sidebar Widgets */
+.nri-widget-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-card);
+}
+
+.nri-agent-card {
+  text-align: center;
+}
+
+.agent-avatar-lg {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 0.75rem;
+  border: 2.5px solid var(--color-gold);
+}
+
+.agent-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+.agent-role {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.agent-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.25rem;
+}
+
+.agent-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+/* Hotline Card */
+.hotline-banner-card {
+  background: #0B2240;
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.hotline-banner-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.hotline-banner-sub {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 1rem;
+}
+
+.hotline-banner-num {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.25rem;
+}
+
+/* AI Assistant Mini Chat */
+.ai-assistant-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.ai-bubble {
+  background: #F1F5F9;
+  border-radius: var(--radius-md) var(--radius-md) var(--radius-md) 4px;
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: var(--color-text-main);
+  margin-bottom: 0.85rem;
+}
+
+.ai-chips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.ai-chip {
+  background: #F8FAFC;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.78rem;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.ai-chip:hover {
+  border-color: var(--color-gold);
+  background: var(--color-gold-light);
+  color: var(--color-gold);
+}
+
+.ai-input-wrap {
+  position: relative;
+}
+
+.ai-input-wrap input {
+  padding-right: 2.5rem;
+  height: 38px;
+  font-size: 0.85rem;
+}
+
+.ai-send-btn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-gold);
+}
+
+/* Dedicated Layout with Left Sidebar (My Properties, Shortlisted, Compare, Property Management, Documents) */
+.nri-sidebar-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr 320px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.nri-sidebar-menu {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  box-shadow: var(--shadow-card);
+}
+
+.nri-sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-bottom: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.nri-sidebar-item:hover {
+  background: #F8FAFC;
+  color: var(--color-gold);
+}
+
+.nri-sidebar-item.active {
+  background: var(--color-gold-light);
+  color: var(--color-gold);
+  border: 1px solid rgba(197, 138, 42, 0.3);
+}
+
+/* Floating Live Chat Button */
+.live-chat-floating {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  background: var(--gradient-gold);
+  color: #fff;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 8px 20px rgba(197, 138, 42, 0.4);
+  z-index: 100;
+  transition: all 0.25s ease;
+}
+
+.live-chat-floating:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(197, 138, 42, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+  .nri-sidebar-layout {
+    grid-template-columns: 220px 1fr;
+  }
+  .nri-kpi-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .nri-subnav {
+    gap: 1rem;
+    padding: 0 1.25rem;
+  }
+  .nri-subnav-link {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nri-main-grid {
+    grid-template-columns: 1fr;
+  }
+  .nri-sidebar-layout {
+    grid-template-columns: 1fr;
+  }
+  .nri-props-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nri-subnav {
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+  .nri-subnav-link {
+    font-size: 0.82rem;
+    padding: 0.75rem 0.15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nri-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .nri-props-grid {
+    grid-template-columns: 1fr;
+  }
+  .nri-navbar {
+    padding: 0.75rem 1rem;
+  }
+  .nri-subnav {
+    padding: 0 0.75rem;
+    gap: 0.5rem;
+  }
+}
+
+.nri-owned-layout {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr) 370px;
+  align-items: stretch;
+  min-height: calc(100vh - 114px);
+  background: #fff;
+  color: #071a33;
+}
+
+.nri-owned-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px 14px 24px;
+  background: #071a33;
+  color: #fff;
+}
+
+.nri-owned-promo {
+  margin-top: 68px;
+  min-height: 144px;
+  padding: 16px 18px !important;
+}
+
+.nri-owned-category-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.nri-owned-category-label svg {
+  flex: 0 0 auto;
+  color: #94a3b8;
+}
+
+.nri-owned-category-count {
+  padding: 1px 7px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.nri-owned-sidebar nav button[aria-pressed="true"] .nri-owned-category-label svg {
+  color: #c58a2a;
+}
+
+.nri-owned-sidebar nav button[aria-pressed="true"] .nri-owned-category-count {
+  background: rgba(197, 138, 42, 0.2);
+  color: #c58a2a;
+}
+
+.nri-owned-main {
+  min-width: 0;
+  padding: 22px 25px 48px 48px;
+  overflow: visible;
+}
+
+.nri-owned-title {
+  margin: 0;
+  color: #071a33;
+  font-family: var(--font-serif);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.nri-owned-filter-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.65fr) auto;
+  align-items: end;
+  gap: 12px;
+  margin: -4px 0 16px;
+  padding: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.nri-owned-filter-panel label {
+  display: grid;
+  gap: 5px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.nri-owned-filter-panel input,
+.nri-owned-filter-panel select {
+  height: 36px;
+  padding: 0 10px;
+  font-size: 12px;
+}
+
+.nri-owned-filter-panel > button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  color: #475569;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.nri-owned-stats {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.nri-owned-stat {
+  display: flex;
+  min-width: 0;
+  min-height: 62px;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #fff;
+  text-align: left;
+  transition: border-color 0.15s ease;
+}
+
+.nri-owned-stat:not(:disabled) {
+  cursor: pointer;
+}
+
+.nri-owned-stat.active {
+  border-color: #c58a2a;
+}
+
+.nri-owned-stat-icon {
+  display: flex;
+  width: 29px;
+  height: 29px;
+  flex: 0 0 29px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.nri-owned-stat-copy {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.nri-owned-stat-label {
+  overflow: hidden;
+  color: #64748b;
+  font-size: 9px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nri-owned-stat-value {
+  overflow: hidden;
+  color: #071a33;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nri-owned-stat.highlight .nri-owned-stat-value {
+  color: #071a33;
+  font-size: 14px;
+}
+
+.nri-owned-properties {
+  min-width: 0;
+}
+
+.nri-owned-properties.list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.nri-owned-properties.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.nri-owned-property-card,
+.nri-owned-grid-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.nri-owned-property-card {
+  display: grid;
+  grid-template-columns: minmax(220px, 30.5%) minmax(0, 1fr);
+  min-height: 167px;
+}
+
+.nri-owned-property-image {
+  position: relative;
+  height: 162px;
+  align-self: center;
+}
+
+.nri-owned-property-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nri-owned-property-details {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 16px;
+}
+
+.nri-owned-property-details > div:first-child {
+  min-width: 0;
+}
+
+.nri-owned-property-details h3 {
+  font-size: 15px !important;
+}
+
+.nri-owned-card-actions {
+  position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 6px;
+}
+
+.nri-owned-card-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  z-index: 4;
+  display: grid;
+  min-width: 155px;
+  padding: 5px;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(7, 26, 51, 0.14);
+}
+
+.nri-owned-card-menu a,
+.nri-owned-card-menu button {
+  padding: 8px;
+  border-radius: 4px;
+  color: #334155;
+  font-size: 11px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.nri-owned-card-menu a:hover,
+.nri-owned-card-menu button:hover {
+  background: #f8fafc;
+}
+
+.nri-owned-grid-card > div:first-child img {
+  display: block;
+}
+
+.nri-owned-show-more {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 100%;
+  padding: 7px 16px !important;
+  border-color: #f1e7d8 !important;
+  background: #fffcf8 !important;
+  color: #071a33 !important;
+  font-size: 11px !important;
+}
+
+.nri-owned-summary {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 12px;
+  padding: 17px 12px 40px;
+  background: #fff;
+}
+
+.nri-owned-summary-card {
+  padding: 14px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(7, 26, 51, 0.03);
+}
+
+.nri-owned-investment-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.nri-owned-investment-body > svg {
+  flex: 0 0 132px;
+}
+
+.nri-owned-investment-legend {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.nri-owned-investment-item {
+  display: grid;
+  gap: 1px;
+  color: #475569;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.nri-owned-investment-item > div {
+  white-space: nowrap;
+}
+
+.nri-owned-investment-item strong {
+  padding-left: 15px;
+  color: #071a33;
+  font-size: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nri-owned-service {
+  display: flex;
+  min-width: 0;
+  min-height: 48px;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  background: #fff;
+  color: #c58a2a;
+  text-decoration: none;
+}
+
+.nri-owned-service > svg {
+  flex: 0 0 auto;
+  padding: 3px;
+  box-sizing: content-box;
+  border-radius: 5px;
+  background: #fff7ed;
+}
+
+.nri-owned-service span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 2px;
+  color: #071a33;
+}
+
+.nri-owned-service strong {
+  overflow: hidden;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nri-owned-service small {
+  color: #475569;
+  font-size: 9px;
+}
+
+.nri-owned-service:first-child small {
+  color: #059669;
+}
+
+.nri-owned-document-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7px;
+  min-height: 24px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.nri-owned-document-row:last-child {
+  border-bottom: 0;
+}
+
+.nri-owned-document-row > span {
+  flex: 0 0 auto;
+  font-size: 10px;
+}
+
+.nri-owned-summary-card a:hover {
+  color: #a76e14;
+}
+
+.nri-owned-summary-card > div > a[href^="tel:"] {
+  text-decoration: none;
+}
+
+@media (max-width: 1280px) {
+  .nri-owned-layout {
+    grid-template-columns: 200px minmax(0, 1fr) 315px;
+  }
+
+  .nri-owned-main {
+    padding-right: 18px;
+    padding-left: 24px;
+  }
+
+  .nri-owned-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .nri-owned-property-card {
+    grid-template-columns: minmax(180px, 30%) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 1050px) {
+  .nri-owned-layout {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+
+  .nri-owned-summary {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 18px 32px 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .nri-owned-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nri-owned-sidebar {
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .nri-owned-sidebar nav {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nri-owned-sidebar > div:last-child {
+    display: none;
+  }
+
+  .nri-owned-main {
+    padding: 22px 16px 28px;
+  }
+
+  .nri-owned-title {
+    font-size: 24px;
+  }
+
+  .nri-owned-summary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 16px 28px;
+  }
+
+  .nri-owned-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .nri-owned-main > div:first-child {
+    align-items: flex-start !important;
+    flex-direction: column;
+  }
+
+  .nri-owned-filter-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .nri-owned-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nri-owned-properties.grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nri-owned-property-card {
+    grid-template-columns: 1fr;
+  }
+
+  .nri-owned-property-image {
+    height: 190px;
+  }
+
+  .nri-owned-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .nri-owned-investment-body {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .nri-navbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .nri-nav-left {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .nri-nav-search {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .nri-nav-right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .nri-subnav {
+    position: static;
+    top: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .nri-nav-right .nri-hotline,
+  .nri-nav-right .nri-user-info {
+    display: none;
+  }
+
+  .nri-user-dropdown {
+    gap: 4px;
+    padding: 2px;
+  }
+
+  .nri-avatar-img {
+    width: 34px;
+    height: 34px;
+  }
+}

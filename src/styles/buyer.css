@@ -1,0 +1,337 @@
+/* =========================================================
+   BUYER & SELLER DASHBOARDS STYLES
+   Matches: 2.1 Buyer Dashboard, 2.1 Property Dashboard,
+   2.1 Add New Property (Standard & Open Plot), 3.1 Admin
+   ========================================================= */
+
+.dashboard-page {
+  padding: 2rem 2.5rem 4rem;
+  max-width: 1536px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.75rem;
+}
+
+.dashboard-welcome h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-text-heading);
+}
+
+.dashboard-welcome p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+/* 4 Top Stat Cards (Buyer Dashboard) */
+.buyer-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.buyer-stat-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-card);
+}
+
+.buyer-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.buyer-stat-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buyer-stat-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buyer-stat-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--color-text-heading);
+  line-height: 1;
+}
+
+.buyer-stat-lbl {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* Recommended Properties Row (with Purple Add to Compare) */
+.recommended-row-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.buyer-prop-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.buyer-prop-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.buyer-prop-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 190px;
+}
+
+.buyer-prop-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.buyer-card-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.buyer-card-heart {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+
+.buyer-card-heart:hover, .buyer-card-heart.active {
+  background: var(--color-white);
+  color: #ef4444;
+}
+
+.buyer-prop-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.buyer-prop-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.buyer-prop-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-heading);
+}
+
+.buyer-prop-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--color-purple);
+  white-space: nowrap;
+}
+
+.buyer-prop-loc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.buyer-prop-specs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
+  margin-bottom: 1.25rem;
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+}
+
+.buyer-prop-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+/* Explore More Cards */
+.explore-more-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.explore-more-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-card);
+}
+
+.explore-more-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-purple);
+}
+
+/* Seller Property Dashboard Cards */
+.seller-summary-strip {
+  display: grid;
+  grid-template-columns: 1.3fr repeat(5, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.seller-summary-hero {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-card);
+}
+
+.seller-hero-thumb {
+  width: 90px;
+  height: 75px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.seller-stat-metric {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+}
+
+/* Table Style for Leads */
+.seller-table-wrap {
+  overflow-x: auto;
+}
+
+.seller-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.seller-table th {
+  background: #f8fafc;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.seller-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-main);
+}
+
+.seller-table tr:hover td {
+  background: #f8fafc;
+}
+
+.status-pill {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.status-new { background: #eff6ff; color: #2563eb; }
+.status-contacted { background: #f0fdf4; color: #16a34a; }
+.status-scheduled { background: #fefce8; color: #ca8a04; }
+.status-discussion { background: #faf5ff; color: #9333ea; }
+.status-active { background: #dcfce7; color: #15803d; }
+.status-review { background: #fef3c7; color: #d97706; }
+.status-rejected { background: #fee2e2; color: #dc2626; }
+
+/* Responsive */
+@media (max-width: 1280px) {
+  .buyer-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .seller-summary-strip {
+    grid-template-columns: 1fr 1fr;
+  }
+  .recommended-row-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    padding: 1.25rem 1rem;
+  }
+  .buyer-stats-grid,
+  .recommended-row-grid,
+  .explore-more-grid,
+  .seller-summary-strip {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,72 @@
+:root {
+  /* Brand Palette */
+  --color-primary-navy: #071A33;
+  --color-dark-navy: #031226;
+  --color-deep-navy: #06152B;
+  --color-card-navy: #0B2240;
+  
+  --color-gold: #C58A2A;
+  --color-gold-hover: #B3791E;
+  --color-gold-highlight: #E4AC4C;
+  --color-gold-light: #FBF4E8;
+  --color-gold-border: rgba(197, 138, 42, 0.25);
+  
+  --gradient-gold: linear-gradient(135deg, #C58A2A 0%, #D89C3A 50%, #B8791B 100%);
+  --gradient-gold-hover: linear-gradient(135deg, #D89C3A 0%, #E4AC4C 50%, #C58A2A 100%);
+  --gradient-navy: linear-gradient(180deg, #071A33 0%, #031226 100%);
+  
+  /* Feature Accent Colors */
+  --color-purple: #5B46E8;
+  --color-purple-hover: #4F38D9;
+  --color-purple-light: #F0EDFF;
+  
+  --color-green: #16A34A;
+  --color-green-dark: #15803D;
+  --color-green-light: #F0FDF4;
+  --gradient-green: linear-gradient(135deg, #16A34A 0%, #15803D 100%);
+  
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --color-bg-page: #F7F8FA;
+  --color-bg-subtle: #F3F4F6;
+  --color-border: #E5E7EB;
+  --color-border-subtle: #F0F2F5;
+  
+  /* Text */
+  --color-text-main: #101A2F;
+  --color-text-heading: #0F172A;
+  --color-text-secondary: #64748B;
+  --color-text-muted: #94A3B8;
+  --color-text-gold: #C58A2A;
+  
+  /* Status */
+  --color-success: #16A34A;
+  --color-success-bg: #DCFCE7;
+  --color-warning: #D97706;
+  --color-warning-bg: #FEF3C7;
+  --color-danger: #EF4444;
+  --color-danger-bg: #FEE2E2;
+  --color-info: #0284C7;
+  --color-info-bg: #E0F2FE;
+
+  /* Typography */
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  
+  /* Spacing & Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 35px rgba(0, 0, 0, 0.12);
+  --shadow-gold: 0 8px 20px rgba(197, 138, 42, 0.25);
+  --shadow-card: 0 2px 10px rgba(16, 26, 47, 0.04), 0 0 1px rgba(16, 26, 47, 0.08);
+}
